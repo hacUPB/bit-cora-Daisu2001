@@ -27,4 +27,4 @@ EL programa ejecutó correctamente la representación del ciclo fetch-decode-exe
 
 En la dirección de memoria 16 se encuentra el data register que estabamos llevando, en este caso un 3, al final el programa queda en un loop que no entiendo
 
-Luego realicé yo mismo un programa de fetch-decode execute que suma el 10 y el 5 y los almacena en el espacio de memoria 20
+Luego realicé yo mismo un programa de fetch-decode execute que suma el 10 y el 5 y los almacena en el espacio de memoria 20, si bien el programa para ejecutar el computador hack no me muestra la M, confío en que el resultado es correcto, referirse a Experimento1.asm.
