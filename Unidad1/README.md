@@ -34,3 +34,16 @@ Luego realicé yo mismo un programa de fetch-decode execute que suma el 10 y el 
 
 Como yo había llegado tarde, estaba desatrasandome y llegué a ver el desarrollo de esta actividad en clase, el programa realiza un ciclo que verifica si una tecla está presionada, mientras lo esté pintará los pixeles de la pantalla 1 a 1 de izquierda a derecha.
 
+# Actividad 4#
+![alt text](image.png)
+
+Podemos ver que el programa se ejecuta de manera correcta, pues siendo el valor 5 en @5 y 10 en @10, es menor y vemos un 1 escrito en @7
+
+# Actividad 5#
+
+![alt text](image-1.png)
+
+COmo podemos evidenciar, en el espacio 12 de memoria se puede ver la sumatoria de los numeros del uno al 5, la cual es 15, el programa funciona correctamente, la manera de implementarlo fue utilizando un ciclo que funcionara mientras un contador fuera menor o igual que 5, así mismo este contador se utilizaba para sumar cada vuelta del loop al resultado final.
+
+
+
