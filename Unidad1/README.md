@@ -45,5 +45,9 @@ Podemos ver que el programa se ejecuta de manera correcta, pues siendo el valor 
 
 COmo podemos evidenciar, en el espacio 12 de memoria se puede ver la sumatoria de los numeros del uno al 5, la cual es 15, el programa funciona correctamente, la manera de implementarlo fue utilizando un ciclo que funcionara mientras un contador fuera menor o igual que 5, así mismo este contador se utilizaba para sumar cada vuelta del loop al resultado final.
 
+# Actividad 6#
+
+Revisar .md correspondiente
+
 
 
