@@ -14,3 +14,17 @@ comprender la arquitectura de un computador digital moderno utilizando los recur
 - Manejar la entrada y salida de datos.
 
 
+# Actividad 1#
+
+para la actividad 1 tomé nota en un archivo markdown que se encuentra dentro de la carpeta de investigación
+
+
+# Actividad 2#
+![alt text](image.png)
+
+
+EL programa ejecutó correctamente la representación del ciclo fetch-decode-execute, en el que identificó espacios de memoria señalados por A. Todo esto ocurre gracias a una ciclo realizado por la CPU. en este caso está moviendo datos entre registros.
+
+En la dirección de memoria 16 se encuentra el data register que estabamos llevando, en este caso un 3, al final el programa queda en un loop que no entiendo
+
+Luego realicé yo mismo un programa de fetch-decode execute que suma el 10 y el 5 y los almacena en el espacio de memoria 20
