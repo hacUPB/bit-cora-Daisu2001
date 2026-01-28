@@ -15,4 +15,5 @@ En la teoría de computación debemos entender que así como la memoria almacena
 
 Podemos definir un computador como un procesador (CPU) que manipula un conjunto de registros, y hay 2 tipos de registros, CPU-resident register(pocos, se accede directamente por el nombre) y Memory resident registers(muchos, se accede por medio de la dirección).
 
- En conjunto, la arquitectura se basa en que la CPU lee instrucciones y datos desde memoria, los procesa y se comunica mediante los buses con los periféricos para interactuar con el usuario.![alt text](image.png)
+ En conjunto, la arquitectura se basa en que la CPU lee instrucciones y datos desde memoria, los procesa y se comunica mediante los buses con los periféricos para interactuar con el usuario.![alt text](image.png)![alt text](image-1.png)
+ ![alt text](image-2.png)
