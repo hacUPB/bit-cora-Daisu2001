@@ -102,3 +102,55 @@ Para la realización del exprimento me tuve que apoyar de la IA, ya que no me en
 
 
 aquí podemos ver como se crean 2 clases con atributos propios como potencia y voltaje, y luego una clase híbrida que hereda ambas clases motor y sistéma eléctrico, y luego se puede utilizar en el main, ocupará el espacio en memoria de ambas clases padre
+
+# Actividad 6#
+
+![alt text](<Imágenes/actividad6 depur.png>)
+
+
+Cuando analizamos el código y utilizamos el depurador
+
+![alt text](Imágenes/actv62.png)
+
+podemos ver que aunque estamos analizando particle, estaamos viendo el objeto real rising particle, si desplegamos la herencia podemos ver cómo se aplica el polimorfismo con una clase abstracta, al presionar f11, no nos llevará a la clase padre, sino a su implementación específica que obligatoriamente debe estar implmementada, es un metodo virtual
+
+![alt text](Imágenes/Dibujo.png)
+
+la relación entre el polimorfismo y los métodos virtuales es directa, los métodos virtuales son una manera que tenemos para aplicar el polimorfismo, con ellos le decimos al compilador que cuando se instancia un hijo del objeto, el método debe ser implementado específicamente para ese hijo, y que debe revisar cómo se hace en cierta dirección en el código.
+
+
+# Actividad 7# 
+
+Para la actividad 7 debía agregar 2 nuevos tipos de partículas a rising particles, escogí una que se moviera de manera curva, y otra que se moviera de manera erratica, tenía bastante claro como implementar nuevas partículas, y sólo me apoyé de la IA para el código de la driftingparticle, ya que utilizaba una funcion que no conocía
+
+![alt text](Imágenes/parti1.png)
+![alt text](Imágenes/parti2.png)
+
+
+Aquí estamos utilizando distintos conceptos que vimos durante la unidad, al crear clases nuevas que son rising particles, estamos utilizando la herencia, por eso luego no tenemos que reimplementar todas las funciones en las nuevas particulas, ya que se encuentran en la clase padre rising particle, tambén vemos el encapsulamiento, en la manera en la que manejamos información privada y pública dentro de nuestras clases y así decidimos quienes y cómo pueden acceder a esa información, y el polimorfismo en la manera en la que cuando llamamos en el update a las particulas, el programa sabe a cual debe ir y actualizar dentro del código, así sean particulas distintas.
+
+![alt text](Imágenes/explode.png)
+
+
+también agregué una explosión con cuadrados, fue bastante sencillo, y para hacer todo funcionar, al final tuve que realizar los cambios correspondientes en el ofApp.cpp para que tuvieran en cuenta las clases nuevas en al generación aleatoria de los objetos.
+
+
+para verificar la correcta aplicación de estos principios utilizamos el depurador
+
+![alt text](Imágenes/verificacion.png)
+![alt text](Imágenes/puntero.png)
+
+Aunque el puntero es de tipo particles, este señala el tipo de particula que se generó en este caso como objeto especializado, y en cada iteración mostrará uno distinto, esto muestra que los principios, en especial el polimorfismo estan bien aplicados, pero también la herencia y el encapsulamiento lo hacen posible.
+
+
+
+# Evaluación, consolidación y cierre#
+
+abordar esta unidad fue un desafío porque aunque entendía los conceptos de la POO, no los tenía tan afianzados, y así mismo no estoy acostumbrado al uso del depurador, siento que realizar los ejercicios fue fácil, sin embargo lento y lleno de información util, que me ayudó a entender la utilización detrás del telón de todos estos principios siento que lo valioso de trabajar con c++ es que realmente te hace entender el manejo y los procesos en memoria como nada más lo hace, y esto te ayuda a entender fundamentalmente los conceptos tratados, más que principios, su funcionamiento.
+
+
+siento que tuve un buen desempeño dentro de la unidad, no me perdí mucho, y en momentos de bloqueo supe apoyarme de las herramientas a mi disposición, más que para obtener un resultado, para entender que me faltaba y como hacerlo bien.
+
+siento que mi documetnación fue detallada, y pude demostrarle al profe mi entendimiento de los conceptos, por lo que mi autocalificación sería un 5.
+
+para cerrar tengo como conclusiones que si quieres tener un codigo optimizado y seguro debes tener siempre claros los conceptos de POO, y de manejo de memoria, incluso cuando no estás trabajando en un lenguaje de alto nivel, porque esto hace en últimas, el códgio más fácil de trabajar y editar en un futuro.
