@@ -97,3 +97,19 @@ El evento que desencadena el cambio de estados es presionar una tecla
 Reporte:
 
 1. El patrón state nos permite regular un programa declarando estados por los que puede transitar, y podemos crear reglas para estos estados, en cohesión con el observer y el factory permite realizar un codigo robusto y confiable, la ciencia detrás del método state se basa en las máquinas con estados finitos, sin embargo las máquinas de estados finitos con muchos estados empiezan a volverse complejas de entender, manejar y ampliar, y el metodo state nos entrega una solución a esto creando una interfaz a la cual el contexto puede delegar el trabajo de cambiar estados.
+
+
+
+2. 
+
+3. utilizar el patrón state en este caso nos evita varios problemas, primero en legibilidad del código pues no tenemos muchos condicionales complicados en una clase y no es tan díficil de mantener, ya que un fallo en la lógica de un estado, puede dañar la de otro estado, en cambio si cada estado es su propia clase con su lógica de draw encapsulada y si necesitas cambiar su comportamiento solo debes modificar esa clase. En términos de extensibilidad también es muy efectivo, pues no tenemos que ir a buscar cáda parte del codigo donde haya un condicional con ese estado, sólo debes crear una nueva clase que herede el estado base y la hora de hacer transiciones el método state nos ahorra tener que manejar variables booleanas para ejecutar codigo una sola vez, sino que manejas los métodos OnEnter y OnExit para manejar la memoria y evitar desbordamientos y mal uso, el destructor se llama automáticamente al cambiar de estado.
+
+4. OnEnter se encarga de definir comportamientos antes de la ejecución del update, nos evita tener que verificar o aplicar comportamientos cada frame. y el OnExit nos ayuda a mantener el orden y gestionar memoria, deja la partícula lista para entrar a un nuevo estado.
+
+En OnEnter attract state podrían declararse más comportamientos, por ejemplo un cambio de tamaño, posición o color a las partículas atraídas.
+
+En OnExit Stop, podrías revertir a los valores base de las partículas para prepararlas a un cambio de estado, o incluso generar un color o sonido que indiquen que se salió del estado.
+
+
+# Actividad 5#
+
