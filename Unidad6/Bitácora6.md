@@ -101,6 +101,7 @@ Reporte:
 
 
 2. 
+![alt text](imagenes/dibu2.png)
 
 3. utilizar el patrón state en este caso nos evita varios problemas, primero en legibilidad del código pues no tenemos muchos condicionales complicados en una clase y no es tan díficil de mantener, ya que un fallo en la lógica de un estado, puede dañar la de otro estado, en cambio si cada estado es su propia clase con su lógica de draw encapsulada y si necesitas cambiar su comportamiento solo debes modificar esa clase. En términos de extensibilidad también es muy efectivo, pues no tenemos que ir a buscar cáda parte del codigo donde haya un condicional con ese estado, sólo debes crear una nueva clase que herede el estado base y la hora de hacer transiciones el método state nos ahorra tener que manejar variables booleanas para ejecutar codigo una sola vez, sino que manejas los métodos OnEnter y OnExit para manejar la memoria y evitar desbordamientos y mal uso, el destructor se llama automáticamente al cambiar de estado.
 
@@ -112,4 +113,38 @@ En OnExit Stop, podrías revertir a los valores base de las partículas para pre
 
 
 # Actividad 5#
+![alt text](imagenes/implem.png)
+
+Para la actividad 5 en un principio pensé en agregar una estrella que titilara, sin embargo, pronto me encontré con las limitaciones de este sistema, si bien es fácil agregar nuevos tipos de partículas, sus comportamientos están sujetos a los parámetros establecidos por la factory, si quisiera poder hacer que titilaran debería añadir un método virtual e implementarlo con cáda partícula en su creación, o crear una subclase solo para la partícula que titila.
+
+Al notar esto, decidí crear una partícula tipo "moon", y fue bastante sencillo, solo hay que añadir el nuevo tipo al particle factory con sus parámetros, y configurarla en el setup
+
+![alt text](imagenes/setuo.png)
+![alt text](imagenes/pafaf.png)
+
+
+Estos simple cambios entran en contacto con los principios vistos anteriormente, estos hacen posible que estos cambios sean tan sencillos.
+
+- primero utilizamos la factory para definir los parametros de "moon", como su tamaño y su color sin tener que ponerlos en OfApp, sino solo pasando el string moon.
+
+-Luego, en el setup añadimos las partículas moon como observers, esto hace que sean subscriptoras del subject y pueden alterar su comportamiento mediante OnNotify
+
+-finalmente entra dentro del flujo de trabajo del patrón state, al ser un observador concreto, al momento que reciba la notificación de que debe cambiar de estado, cambiará su comportamiento, sin tener que implementarlo en la partícula específica, sino por un sistema de estados construido con el patrón state.
+
+
+El código fuente se encuentra en la carpeta de investigación de esta unidad.
+
+# Autoevaluación#
+
+Nota propuesta: 5
+
+Siento que me merezco un 5 en la bitácora de esta unidad ya que tengo las 5 actividades completas y siento que entendí completamente el tema, esto en la bitácora, ya que soy consciente de que mi asistencia dejó que desear.
+
+Esta unidad me trajo sopresas, es el primer tema que vemos del cual no tenía ni siquiera una noción y debo decir que fue bastante interesante, realmente son cosas que me gustaría aplicar a mis proyectos y códigos, ya que solucionan muchos problemas de no tener un código ordenado, y limitarse a uno mismo con la implementación inicial.
+
+
+Siento que mi desarrollo de esta unidad fue bueno, no necesité apoyarme de la IA, con la información de refactory gurú y la unidad fue más que suficiente, me interesó mucho ver la interacción de estos patrones de diseño funcionando en conjunto en un mismo código, y cómo se habilitan mutuamente.
+
+Tengo una bitácora completa con imágenes de prueba y buen entendimiento del tema.
+
 
