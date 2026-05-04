@@ -64,3 +64,11 @@ si camias el 3er parámetro a 2 desaparece y a 4 vuelve a aparecer, acá se conf
 
 Si no lo activas y la imagen es estática vas a pedirle mucho esfuerzo a la gpu cuando no lo necesita, pues intentará rendereizar la imagen sin parar. aunque reducuiría el input lag. Y si es dinámica, solo se verá como intenta dibujar 2 frames al tiempo glitcheando el movimiento.
 
+8. el legacy era mucho más ineficiente pues maejaba instrucciones individuales, mientras que el moderno trabaja en base de shaders que se procesan muy rapido en la gpu.
+
+9.  el shader program es el ejecutable final, es el cerebro que procesa los numeros en la gpu.
+
+10.  pone los datos del triángulo dentro del contexto. el VBO es el almacén de datos de la gpu, y VAO guarda la configuración.
+
+11.
+
