@@ -70,5 +70,11 @@ Si no lo activas y la imagen es estática vas a pedirle mucho esfuerzo a la gpu 
 
 10.  pone los datos del triángulo dentro del contexto. el VBO es el almacén de datos de la gpu, y VAO guarda la configuración.
 
-11.
+11. En este caso no es necesario pues sólo tienes un objeto, y si lo activas antes del loop Opengl guarda la configuración, pero si tuvieras múltiples objetos en cada iteración liberas el Vao y setteas uno nuevo.
+
+12. swapbuffers ocurre porque opengl maneja 2 buffers, el que se muestra en pantalla y el que dibuja en segundo plano, swapbuffers intercambia estos búfers y te muestra la imagen, sin él te quedarías con el color inicial.
+
+# Actividad 4
+
+La cpu y la gpu pueden en últimas realizar procesos similares, la direrencia reside en la manera en la que se procesa esa lógica, en una cpu es secuencial y en una gpu es simultánea.
 
