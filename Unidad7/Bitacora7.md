@@ -103,3 +103,18 @@ El fragmento es la información que compone el pixel, el pixel es el punto en la
 # 5
 
 
+el Z-buffer se utiliza para resolver un problema con los píxeles, ya que al tener muchos vértices en una escena 3d por ejemplo, hay cosas que pueden estar más atrás que otras, el z-buffer le añade la dimensión de la profundidad a los píxles para indicar donde están y que la cámara solo vea lo que está al frente. El depth test utiliza el depth buffer para verificar que está adelante y que está atras comparando las coordenadas en Z.
+
+
+# 6 
+
+el antialiasing surje del problema de que por ejemplo, renderizas un triángulo, pero la línea de este triangulo pasa por la mitad de un pixel, el pixel entero será pintado con el color del triángulo, resultando en bordes pixelados o parpadeos. El antialiasing marca 16 puntos a través del píxel, para determinar como pintar ese píxel dependiendo de la cantidad de esos 16 puntos cubierta por el triángulo.
+
+# 7 
+
+El fragment shader se encarga de sombrear cada píxel teniendo en cuenta la iluminación, cada fragmento cambia el tono de su colo dependiendo de si la normal está mirando hacia una fuente de luz o no. Es posible hacer un shader sin iluminación, esto mejoraría el rendimiento del programa y esto también se vería refljeado en gráficos más simples.
+
+# 8
+
+múltiples fuentes de iluminación implican más trabajo para la gpu, un cálculo más largo y más complejo, por lo que normalmente se limita el numero de luces que influyen en el shader, así haya más se limita a ciertas luces por temas de rendimiento.
+
