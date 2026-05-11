@@ -78,3 +78,28 @@ Si no lo activas y la imagen es estática vas a pedirle mucho esfuerzo a la gpu 
 
 La cpu y la gpu pueden en últimas realizar procesos similares, la direrencia reside en la manera en la que se procesa esa lógica, en una cpu es secuencial y en una gpu es simultánea.
 
+
+Los pasos claves del pipeline
+1. vertex processing que se encarga de cargar los vertices.
+
+2. rastetización: es como se decide esos vectores en que pixeles aparecerán.
+
+3. fragment processing: aplicar las texturas y colores.
+
+
+El pipeline programable significa que, mediante los shaders, el programador puede decidir como se colorean los pixeles, en el legacy, la gpu tenía funciones predefinidas, tu solo las prendías y apagabas.
+
+la ventaja de esto es la posibilidad que otorga para hacer distintas cosas con esos píxeles, es mucha más flexibilidad y espacio a la creatividad del público para mejorar la experiencia.
+
+Necesitas programar el vertex shader y el fragment shader
+
+# 3
+rasterización: es el proceso mediante el cual se toman los vectores y se arreglan en una rejilla de fragmentos.
+
+# 4 
+
+El fragmento es la información que compone el pixel, el pixel es el punto en la pantalla.
+
+# 5
+
+
