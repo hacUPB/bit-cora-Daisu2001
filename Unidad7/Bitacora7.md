@@ -118,3 +118,52 @@ El fragment shader se encarga de sombrear cada píxel teniendo en cuenta la ilum
 
 múltiples fuentes de iluminación implican más trabajo para la gpu, un cálculo más largo y más complejo, por lo que normalmente se limita el numero de luces que influyen en el shader, así haya más se limita a ciertas luces por temas de rendimiento.
 
+![alt text](Imagenes/trestri.png)
+
+# Actividad 5
+
+![alt text](Imagenes/interacti.png)
+
+La normalización de las coordenadas del mouse se hace convirtiendo las coordenadas en la pantalla a un número con valor de 0 a 1, se logra dividiendo la posición actual del cursor por el tamaño de la pantalla, se relaciona con opengl porque este último no entiende la información del pixel directamente, necesita unos valores relativos para que el sistema de coordenadas de dispositiivo pueda trabajar más fácilmente.
+
+
+El NDC es el sistema de coordenadas interno de opengl, donde el sentro de la pantalla es 0,0 y los bordes van de -1 a 1, 
+
+ ![alt text](Imagenes/linea.png)
+
+ esta línea convierte el valor que obtenemos de la normalización del mouse a una coordenada valida para el NDC.
+
+ # Actividad 6
+
+ ![alt text](Imagenes/6a.png)
+
+ para lograrlo utilizamos la funcion glfwgettime dentro del bucle principal, esto nos devuelve el tiempo transcurrido desde que se inició la librería, después localizamos la dirección del uniform, y luego en cada iteración del render, se le envía el valor actualizado antes de que se dibuje
+
+
+ - Código del fragment shader:
+
+ #version 460 core
+out vec4 FragColor;
+uniform float time; 
+
+void main() {
+    float greenValue = (sin(time) / 2.0) + 0.5;
+    float blueValue = (cos(time) / 2.0) + 0.5;
+    FragColor = vec4(0.2, greenValue, blueValue, 1.0);
+}
+
+se utilizaron las funciones sin y cos porque son funciones cíclicas, lo que nos garantizaba el efecto deseado fácilmente, como sin y cos devuelven valores entre 1 y -1, podemos aplicar la formula (sin(T)/2) + 0.5 para normalizar el intervalo a 0,0 y 1.0
+
+Utilizando el mismo método podríamos fácilmente alterar valores del triángulo, por ejemplo hacer que se mueva solo con el paso del tiempo, cambiar tamaño o rotación. Podría hacerse, partiendo del ejemplo de la actividad 5, un triángulo que siga el mouse, cambie de color con el tiempo y gire constantemente en una dirección.
+
+
+# Autoevaluación
+
+mi nota propuesta para la unidad 7 sería un 5, puesto que realicé las actividades propuestas de manera completa, pude discutir mi aprendizaje en clase con el profesor, y siento que entendí los temas tratados.
+
+![alt text](<Imagenes/Sin título.png>)
+
+
+Siento que esta unidad es poderosa en el área de los videojuegos, ya que el manejo y sombreado 3d puede volverse complicado y pesado, y conocer bien las bases de como funciona te ahorra muchos problemas, siento que entendí bien el tema de los búferes, el Vao y el VBO, asi como el pipeline para programar un shader, aún no siento que fuera capaz de replicarlo por mi cuenta sin más practica, pero siento que fueron unas bases solidas.
+
+Siento que mi plan de trabajo sería enfocado en la práctica para familiarizarme con el uso de las funciones y el órden.
